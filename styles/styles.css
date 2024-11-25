@@ -1,88 +1,116 @@
 /* styles.css */
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    background-color: #1D1D1D;
-    font-family: 'Lemon Milk', sans-serif;
-    color: aliceblue;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #1d1d1d;
+  font-family: "Lemon Milk", sans-serif;
+  color: aliceblue;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 nav {
-    background-color: #1D1D1D; /* Transparent background */
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+  background-color: #1d1d1d;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    padding: 15px 0;
-    display: block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 15px 0;
+  display: block;
 }
 
 .presentation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  flex-direction: column;
 }
 
 .presentation p {
-    margin: 0;
-    font-size: 2em;
+  margin: 0;
+  font-size: 2em;
 }
 
 .presentation .nom {
-    font-size: 3em;
+  font-size: 3em;
 }
 
-.dynamic-text {
-    font-size: 1.5em;
-    animation: typing 3s steps(30, end) infinite;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid;
+.txt-dynamique {
+  font-size: 1.5em;
+  animation: typing 3s steps(30, end) infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
 }
-
 
 .contenu-add {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    opacity: 1;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  flex-wrap: wrap;
+  opacity: 1;
 }
 
 .contenu-add .box {
-    margin: 20px;
-    font-size: 1.2em;
-    background: linear-gradient(to bottom, #2272FF, #1D1D1D);
-    border-radius: 15px;
-    padding: 20px;
-    color: white;
-    flex: 1;
-    text-align: center;
-    height: 400px; /* Adjust the height as needed */
-    width: 100px;
+  margin: 20px;
+  font-size: 1.2em;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  flex: 1 1 300px;
+  text-align: center;
+  height: 400px;
+  max-width: 300px;
 }
 
+.box {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid white;
+}
 
+.box #particles-js-1,
+.box #particles-js-2,
+.box #particles-js-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
 
+/*
+ * Cette règle CSS s'applique à tous les éléments enfants directs des éléments avec la classe "box",
+ * sauf ceux avec les IDs "particles-js-1", "particles-js-2" et "particles-js-3".
+ */
+.box > *:not(#particles-js-1):not(#particles-js-2):not(#particles-js-3) {
+  position: relative;
+  z-index: 1;
+}

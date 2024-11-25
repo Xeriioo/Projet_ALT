@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const dynamicText = document.querySelector('.dynamic-text');
-    const texts = ["étudiant en R&T", "Passionné de technologie"];
+    const dynamicText = document.querySelector('.txt-dynamique');
+    const texts = ["étudiant en R&T", "lutte blyaeth"];
     let textIndex = 0;
     let charIndex = 0;
 
@@ -20,4 +20,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     typeText();
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    particlesJS('particles-js-1', {
+        particles: {
+            number: { value: 100 },
+            color: { value: '#ffffff' },
+            shape: { type: 'circle' },
+            opacity: { value: 0.5 },
+            size: { value: 3 },
+            line_linked: { enable: true },
+            move: { speed: 1 }
+        }
+    });
+
+    particlesJS('particles-js-2', {
+        particles: {
+            number: { value: 100 },
+            color: { value: '#ffffff' },
+            shape: { type: 'circle' },
+            opacity: { value: 0.5 },
+            size: { value: 3 },
+            line_linked: { enable: true },
+            move: { speed: 1 }
+        }
+    });
+
+    particlesJS('particles-js-3', {
+        particles: {
+            number: { value: 100 },
+            color: { value: '#ffffff' },
+            shape: { type: 'circle' },
+            opacity: { value: 0.5 },
+            size: { value: 3 },
+            line_linked: { enable: true },
+            move: { speed: 1 }
+        }
+    });
 });
