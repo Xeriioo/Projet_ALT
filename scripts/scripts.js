@@ -45,3 +45,24 @@ document.addEventListener('DOMContentLoaded', function () {
     checkBoxes(); // Initial check
 
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const paragraphs = document.querySelectorAll('.paragraphe');
+
+    function animateParagraphs() {
+        const triggerBottom = window.innerHeight / 5 * 4;
+
+        paragraphs.forEach(paragraph => {
+            const paragraphTop = paragraph.getBoundingClientRect().top;
+
+            if (paragraphTop < triggerBottom) {
+                paragraph.classList.add('visible');
+            } else {
+                paragraph.classList.remove('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', animateParagraphs);
+    animateParagraphs(); // Vérification initiale
+});

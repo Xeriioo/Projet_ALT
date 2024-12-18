@@ -1,4 +1,9 @@
 /* styles.css */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -8,15 +13,23 @@ body {
   color: aliceblue;
   -ms-overflow-style: none; 
   scrollbar-width: none;  
+  display: flex;
+  flex-direction: column;
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
 
+
+main {
+  flex: 1; 
+}
+
+
 nav {
   background-color: #1d1d1d;
-  position: fixed;
+  position: relative;
   width: 100%;
   top: 0;
   left: 0;
@@ -80,9 +93,9 @@ nav ul li a {
 }
 
 .contenu-add .box {
-  flex: 1 1 300px; /* Largeur minimale de 300px */
-  max-width: 300px; /* Largeur maximale de 300px */
-  margin: 20px; /* Espace autour des boîtes */
+  flex: 1 1 300px; 
+  max-width: 300px; 
+  margin: 20px; 
   font-size: 1.2em;
   border-radius: 15px;
   padding: 20px;
@@ -132,55 +145,75 @@ nav ul li a {
   z-index: 1;
 }
 
-.contenu {
-  padding: 20px;
-  margin: 20px;
-}
+/*  PAGE PROJET   */
 
-.intro-section {
+.p-paragraphe {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  text-align: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 40px;
+  gap: 20vh; /* Espace entre les paragraphes */
 }
 
-.intro-section img {
-  width: 50%;
-  margin-right: 20px;
-}
-
-.intro-section .intro-text {
-  width: 50%;
-  font-size: 1.2em;
-}
-
-.details-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  text-align: center;
-}
-
-.details-section .details-text {
+.paragraphe {
   width: 100%;
-  font-size: 1.2em;
 }
 
-.contenu section {
-  margin-bottom: 20px;
+.paragraphe.gauche {
+  text-align: left;
+  font-size: 3ch;
 }
 
-.contenu h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
+.paragraphe.droite {
+  text-align: right;
+  font-size: 3ch;
+
 }
 
-.contenu p {
-  font-size: 1.2em;
-  line-height: 1.6;
+.paragraphe {
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+
+.paragraphe.visible {
+  opacity: 1;
+}
+
+.paragraphe.gauche {
+  transform: translateX(-100%);
+}
+
+.paragraphe.gauche.visible {
+  transform: translateX(0);
+}
+
+.paragraphe.droite {
+  transform: translateX(100%);
+}
+
+.paragraphe.droite.visible {
+  transform: translateX(0);
+}
+
+.section-titre {
+  text-align: center;
+  margin: 40px 20px;
+}
+
+.titre-principal {
+  font-family: "Lemon Milk", sans-serif;
+  font-size: 3em;
+  color: aliceblue;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 20px;
+  border-bottom: 2px solid aliceblue;
+  display: inline-block;
+}
+
+
+
 
 @keyframes fadeIn {
   from {
@@ -220,8 +253,6 @@ footer {
   color: aliceblue;
   text-align: center;
   padding: 20px;
-  position: relative;
-  bottom: 0;
   width: 100%;
 }
 
