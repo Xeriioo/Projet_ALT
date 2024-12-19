@@ -1,11 +1,13 @@
-<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A propos - Clément Le Bris</title>
-    <link rel="stylesheet" href="/styles/styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Lemon+Milk&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/styles_about.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lemon+Milk&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav>
@@ -16,9 +18,64 @@
       </ul>
     </nav>
 
+    <main>
+      <section class="section-titre">
+        <h1 class="titre-principal">À propos de moi</h1>
+      </section>
+      <hr />
+      <section class="section-cv">
+        <h2>Clément Le Bris</h2>
+        <p>
+          Etudiant en Réseaux & Télécommunication, passionné par les nouvelles
+          technologies
+        </p>
 
+        <h3>Compétences</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Python</li>
+          <li>Base de données: MySQL, MongoDB</li>
+          <li>Gestion de version: Git, GitHub</li>
+          <li>Administration Système</li>
+          <li>conf de switch cisco</li>
+        </ul>
 
+        <h3>Expérience</h3>
+        <p>
+          
+        </p>
 
+        <h3>Éducation</h3>
+        <p>Baccalauréat Spécialite Maths et NSI, Lycée XYZ</p>
+      </section>
+
+      <section class="section-contact">
+        <h3>Contact</h3>
+        <form
+          action="mailto:contact@clement-lbs.me"
+          method="post"
+          enctype="text/plain"
+        >
+          <label for="name">Nom:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+      <hr />
+    </main>
+    <footer>
+      <p>&copy; 2024 Clément Le Bris. Tous droits réservés.</p>
+      <p>
+        <a href="mailto:contact@clement-lbs.me">contact@clement-lbs.me</a>
+      </p>
+    </footer>
     <script src="/scripts/scripts.js"></script>
   </body>
 </html>

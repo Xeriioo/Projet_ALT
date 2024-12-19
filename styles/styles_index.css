@@ -1,0 +1,244 @@
+/* styles.css */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #1d1d1d;
+  font-family: "Lemon Milk", sans-serif;
+  color: aliceblue;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+nav {
+  background-color: #ffffff8c;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 15px 0;
+  display: block;
+}
+
+.presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  flex-direction: column;
+  background: linear-gradient(180deg, #ffffff8c, #1d1d1d);
+}
+
+.presentation p {
+  margin: 0;
+  font-size: 1em;
+}
+
+.presentation .nom {
+  font-size: 3em;
+}
+
+.txt-dynamique {
+  font-size: 1.5em;
+  animation: typing 3s steps(30, end) infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+}
+
+.contenu-add {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 120px; 
+  padding: 20px;
+  margin-bottom: 15vh;
+}
+
+.contenu-add .box {
+  flex: 1 1 300px; 
+  max-width: 300px; 
+  margin: 20px; 
+  font-size: 1.2em;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid white;
+  opacity: 0;
+  background-image: url("../images/back.svg");
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.contenu-add .box a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.box {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.box #projet-1,
+.box #projet-2,
+.box #projet-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.box {
+  position: relative;
+  z-index: 1;
+}
+
+.contenu {
+  padding: 20px;
+  margin: 20px;
+}
+
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.intro-section img {
+  width: 50%;
+  margin-right: 20px;
+}
+
+.intro-section .intro-text {
+  width: 50%;
+  font-size: 1.2em;
+}
+
+.details-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.details-section .details-text {
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.contenu section {
+  margin-bottom: 20px;
+}
+
+.contenu h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.contenu p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+footer {
+  background-color: #1d1d1d;
+  color: aliceblue;
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  footer {
+    padding: 10px;
+  }
+}

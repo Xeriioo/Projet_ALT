@@ -56,103 +56,29 @@ nav ul li a {
   display: block;
 }
 
-.presentation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  flex-direction: column;
-}
-
-.presentation p {
-  margin: 0;
-  font-size: 2em;
-}
-
-.presentation .nom {
-  font-size: 3em;
-}
-
-.txt-dynamique {
-  font-size: 1.5em;
-  animation: typing 3s steps(30, end) infinite;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid;
-}
-
-.contenu-add {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 120px; /* Espace fixe entre les boîtes */
-  padding: 20px;
-  margin-bottom: 15vh;
-}
-
-.contenu-add .box {
-  flex: 1 1 300px; 
-  max-width: 300px; 
-  margin: 20px; 
-  font-size: 1.2em;
-  border-radius: 15px;
-  padding: 20px;
-  color: white;
-  text-align: center;
-  height: 400px;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid white;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.contenu-add .box a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-
-.box {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.box.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.box #projet-1,
-.box #projet-2,
-.box #projet-3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-.box {
-  position: relative;
-  z-index: 1;
-}
-
 /*  PAGE PROJET   */
+
+.section-titre {
+  text-align: center;
+  margin: 40px 20px;
+}
+
+.titre-principal {
+  font-family: "Lemon Milk", sans-serif;
+  font-size: 2em;
+  color: aliceblue;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 20px;
+  display: inline-block;
+}
 
 .p-paragraphe {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 20px 40px;
-  gap: 20vh; /* Espace entre les paragraphes */
+  gap: 20vh;
 }
 
 .paragraphe {
@@ -167,7 +93,7 @@ nav ul li a {
 .paragraphe.droite {
   text-align: right;
   font-size: 3ch;
-
+  word-wrap: break-word;
 }
 
 .paragraphe {
@@ -196,20 +122,35 @@ nav ul li a {
   transform: translateX(0);
 }
 
-.section-titre {
+
+
+.technologies {
+  margin: 40px 0;
+  margin-top: 15vh;
+  margin-bottom: 10vh;
   text-align: center;
-  margin: 40px 20px;
 }
 
-.titre-principal {
-  font-family: "Lemon Milk", sans-serif;
-  font-size: 3em;
-  color: aliceblue;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  margin: 0;
-  padding: 20px;
-  border-bottom: 2px solid aliceblue;
+.tech-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tech-list li {
   display: inline-block;
+}
+
+.tech-list img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.tech-list img:hover {
+  transform: scale(1.2);
 }
 
 
@@ -253,7 +194,6 @@ footer {
   color: aliceblue;
   text-align: center;
   padding: 20px;
-  width: 100%;
 }
 
 footer a {
