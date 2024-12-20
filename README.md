@@ -1,6 +1,6 @@
 # Projet_ALT 🚀
 
-[Lien du texte](https://cv.clement-lbs.me)
+[Lien du site](https://cv.clement-lbs.me)
 
 ## Description 📄
 Ce projet vise à créer un site personnel pour présenter un CV / portfolio. J'ai choisi un thème minimaliste, à base de noir et de blanc.
