@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const dynamicText = document.querySelector('.txt-dynamique');
-    const texts = ["étudiant en R&T", "lutte blyat"];
+    const texts = ["étudiant alternant en R&T", "Passioné par l'informatique"];
     let textIndex = 0;
     let charIndex = 0;
 
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.addEventListener('scroll', checkBoxes);
-    checkBoxes(); // Initial check
+    checkBoxes();
 
 });
 
@@ -64,5 +64,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.addEventListener('scroll', animateParagraphs);
-    animateParagraphs(); // Vérification initiale
+    animateParagraphs();
 });
