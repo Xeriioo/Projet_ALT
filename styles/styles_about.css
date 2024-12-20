@@ -127,7 +127,7 @@ footer {
   color: aliceblue;
   text-align: center;
   padding: 20px;
-  bottom: 0;  
+  bottom: 0;
 }
 
 footer a {
@@ -138,4 +138,3 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-
