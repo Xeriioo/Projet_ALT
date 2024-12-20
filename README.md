@@ -11,6 +11,7 @@ Ce projet vise à créer un site personnel pour présenter un CV / portfolio. J'
 - **Google Fonts** : Police d'écriture "Lemon Milk"
 
 ## Structure du projet 📁
+```
 ├── .gitignore
 ├── README.md
 ├── about.html
@@ -25,6 +26,7 @@ Ce projet vise à créer un site personnel pour présenter un CV / portfolio. J'
     ├── styles_about.css
     ├── styles_index.css
     └── styles_projet.css
+```
 
 ## Contenu 📑
 - **Accueil** : Accédez à la section d'accueil
